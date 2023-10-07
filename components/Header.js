@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React from 'react'
-import { useEffect } from "react";
+import { useEffect ,useState} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -8,25 +8,52 @@ import {
     AiFillTwitterCircle,
     AiFillLinkedin,
     AiFillInstagram,
+    AiOutlineMenu,
+    AiOutlineClose,
   } from "react-icons/ai";
 import deved from "../public/dev-ed-wave.png";
 import favicon from "../public/favicon.png";
 
 export default function Header() {
-  return (
+
+    
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            AOS.init({
-              duration: 1000,
-            });
-          }
-      }, []),
+        if (typeof window !== 'undefined') {
+          AOS.init({
+            duration: 1000,
+          });
+        }
+      }, []);
+    
+      const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+      };
 
+      return (
+  
     <div >
-        <section className="min-h-screen">
+        <section className="min-h-screen relative">
+        {isMenuOpen && (
+          <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
+            <div className="w-full h-full absolute top-0 left-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="absolute top-0 right-0 p-4">
+                <AiOutlineClose
+                  className="text-3xl text-gray-600 dark:text-gray-400 cursor-pointer"
+                  onClick={toggleMenu}
+                />
+              </div>
+              {/* Your menu items go here */}
+            </div>
+          </div>
+        )}
             <nav className="py-10 mb-12 flex justify-between dark:text-white">
                 <Image src={favicon} className="h-16 w-16 " href="cursor-pointer"/>
+                <div className="flex items-center">
                 <ul className="flex items-center">
                     <li>
                         <a
@@ -37,7 +64,17 @@ export default function Header() {
                         </a>
                     </li>
                 </ul>
+                <div
+              className="cursor-pointer"
+              onClick={toggleMenu}
+            >{isMenuOpen ? (
+                <AiOutlineClose className="text-3xl text-teal-500" />
+              ) : (
+                <AiOutlineMenu className="text-3xl text-teal-500" />
+              )}</div>
+            </div>
             </nav>
+
 
             <div className="text-center p-10 py-10">
                 <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
