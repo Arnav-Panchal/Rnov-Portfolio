@@ -32,12 +32,13 @@ export default function Header() {
     
       const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        document.body.classList.toggle('overflow-hidden',isMenuOpen);
       };
 
       return (
   
     <div >
-        <section className="min-h-screen relative">
+        <section className={`min-h-screen relative ${isMenuOpen ? 'fixed' : ''}`}>
         {isMenuOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
             <div className="w-full h-full absolute top-0 left-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
@@ -47,7 +48,14 @@ export default function Header() {
                   onClick={toggleMenu}
                 />
               </div>
-              {/* Your menu items go here */}
+              <div className='text-5xl py-2 text-teal-600 font-medium'>
+                <h1>
+                  About Me
+                </h1>
+                <h1>
+                  Resume
+                </h1>
+              </div>
             </div>
           </div>
         )}
