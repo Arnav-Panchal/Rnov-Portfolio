@@ -13,9 +13,11 @@
     "isomorphic-fetch": "^3.0.0",
     "isomorphic-unfetch": "^4.0.2",
     "next": "^13.5.4",
+    "owl.carousel": "^2.3.4",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-owl-carousel2": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "latest",
