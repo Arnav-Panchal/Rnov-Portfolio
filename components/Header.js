@@ -52,8 +52,10 @@ export default function Header() {
                 <h1>
                   About Me
                 </h1>
-                <h1>
-                  Resume
+                <h1><a
+                       href="public/Resume.pdf" download="Arnav.pdf">
+                        Resume
+                   </a>
                 </h1>
               </div>
             </div>
@@ -62,16 +64,7 @@ export default function Header() {
             <nav className="py-10 mb-12 flex justify-between dark:text-white">
                 <Image src={favicon} className="h-16 w-16 " href="cursor-pointer"/>
                 <div className="flex items-center">
-                <ul className="flex items-center">
-                    <li>
-                        <a
-                            className="bg-gradient-to-r from-cyan-500 text-to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                                href="public/Resume.pdf"
-                                download="Arnav.pdf"
-                                >Resume
-                        </a>
-                    </li>
-                </ul>
+                
                 <div
               className="cursor-pointer"
               onClick={toggleMenu}
