@@ -22,7 +22,7 @@ export default function Aboutme() {
               Specialities:
               <ul className="text-gray-400 py-5 text-2xl">
                 <li className="mb-4">• Frontend: HTML, CSS, JavaScript, React.js, Next.js</li>
-                <li className="mb-4">• Backend: Node.js, Spring</li>
+                <li className="mb-4">• Backend: Node.js, Spring , RESTful APIs</li>
                 <li className="mb-4">• Content Management Systems: WordPress</li>
                 <li className="mb-4">• Design Tools: Figma, Canva</li>
                 <li className="mb-4">• Data Structures and Algorithms</li>
