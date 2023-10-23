@@ -6,6 +6,9 @@ import Header from "@/components/Header";
 import Cards from "@/components/Cards";
 import Folio from "@/components/Folio";
 import Showcase from "@/components/Showcase";
+import Email from "@/components/Email";
+// import { Container,Heading,FormControl,FormLabel,Input } from 'postcss'
+
 // import Opensrc from "@/components/Opensrc";
 
 
@@ -27,6 +30,9 @@ export default function Home() {
         <section className="py-10">
           <Folio/>
           <Showcase/>
+        </section>
+        <section>
+          <Email/>
         </section>
       </main>
     </div>

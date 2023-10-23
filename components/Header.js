@@ -1,8 +1,8 @@
 "use client";
 import React from 'react'
-import { useEffect ,useState} from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {useState} from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import Image from "next/image";
 import {
     AiFillTwitterCircle,
@@ -13,6 +13,7 @@ import {
   } from "react-icons/ai";
 import deved from "../public/dev-ed-wave.png";
 import favicon from "../public/favicon.png";
+import Menu from './Menu';
 
 export default function Header() {
 
@@ -22,13 +23,13 @@ export default function Header() {
 
 
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-          AOS.init({
-            duration: 1000,
-          });
-        }
-      }, []);
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //       AOS.init({
+    //         duration: 1000,
+    //       });
+    //     }
+    //   }, []);
     
       const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -48,16 +49,7 @@ export default function Header() {
                   onClick={toggleMenu}
                 />
               </div>
-              <div className='text-5xl py-2 text-teal-600 font-medium'>
-                <h1>
-                  About Me
-                </h1>
-                <h1><a
-                       href="public/Resume.pdf" download="Arnav.pdf">
-                        Resume
-                   </a>
-                </h1>
-              </div>
+              <Menu/>
             </div>
           </div>
         )}
