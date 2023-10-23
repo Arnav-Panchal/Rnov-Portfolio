@@ -1,8 +1,8 @@
 "use client";
 import React from 'react'
-import { useEffect ,useState} from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {useState} from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import Image from "next/image";
 import {
     AiFillTwitterCircle,
@@ -13,6 +13,7 @@ import {
   } from "react-icons/ai";
 import deved from "../public/dev-ed-wave.png";
 import favicon from "../public/favicon.png";
+import Menu from './Menu';
 
 export default function Header() {
 
@@ -22,13 +23,13 @@ export default function Header() {
 
 
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-          AOS.init({
-            duration: 1000,
-          });
-        }
-      }, []);
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //       AOS.init({
+    //         duration: 1000,
+    //       });
+    //     }
+    //   }, []);
     
       const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -48,30 +49,14 @@ export default function Header() {
                   onClick={toggleMenu}
                 />
               </div>
-              <div className='text-5xl py-2 text-teal-600 font-medium'>
-                <h1>
-                  About Me
-                </h1>
-                <h1>
-                  Resume
-                </h1>
-              </div>
+              <Menu/>
             </div>
           </div>
         )}
             <nav className="py-10 mb-12 flex justify-between dark:text-white">
                 <Image src={favicon} className="h-16 w-16 " href="cursor-pointer"/>
                 <div className="flex items-center">
-                <ul className="flex items-center">
-                    <li>
-                        <a
-                            className="bg-gradient-to-r from-cyan-500 text-to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                                href="public/Resume.pdf"
-                                download="Arnav.pdf"
-                                >Resume
-                        </a>
-                    </li>
-                </ul>
+                
                 <div
               className="cursor-pointer"
               onClick={toggleMenu}
