@@ -1,76 +1,51 @@
 "use client"
-
-//import React from 'react'
-
-import Image from "next/image";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
-
-
+import React,{useState} from 'react';
+import {BsChevronCompactLeft,BsChevronCompactRight} from 'react-icons/bs';
+// import {RxDotFilled} from 'reat-icons/rx'
 
 export default function Showcase() {
+  const slides = [
+    {
+      image:'web3.png'
+    },
+    {
+      url:'https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg'
+    },
+    {
+      url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmucejLtuvUUS6N6aDHkagNnI3zKirp_YsJQKRvKFGLA&s'
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex]=useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex= isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide =() => {
+    const isLastSlide = currentIndex === slides.length - 1 ;
+    const newIndex =isLastSlide ? 0 : currentIndex + 1 ;
+    setCurrentIndex(newIndex);
+  };
+
   return (
-    <div>
-        <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web1}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web2}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web3}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web4}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web5}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web6}
-              />
-            </div>
+    <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group'>
+      <div style={{backgroundImage : `url(${slides[currentIndex].url})` }}className='w-full h-full rounded-2xl bg-center bg-cover duration-500'></div>
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+      </div>
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactRight OnClick={nextSlide} size={30}/>
+      </div>
+      {/* <div className='flex top-4 justify-center py-2'>
+        {slides.map((slide,slideIndex) => {
+          <div>
+            <RxDotFilled/>
           </div>
+        })}
+      </div> */}
     </div>
-  )
-}
+  );
+  }

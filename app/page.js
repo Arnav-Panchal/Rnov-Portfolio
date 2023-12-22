@@ -5,8 +5,9 @@ import Aboutme from "@/components/aboutme";
 import Header from "@/components/Header";
 import Cards from "@/components/Cards";
 import Folio from "@/components/Folio";
-import Showcase from "@/components/Showcase";
+//import Slider from "@/components/Slider";
 import Email from "@/components/Email";
+import Showcase from "@/components/Showcase";
 // import { Container,Heading,FormControl,FormLabel,Input } from 'postcss'
 
 // import Opensrc from "@/components/Opensrc";
