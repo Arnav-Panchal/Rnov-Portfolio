@@ -12,7 +12,7 @@ function ContactForm() {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <form onSubmit={handleSubmit} className="w-1/2 p-4 border-2 border-gray-300 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+      <form onSubmit={handleSubmit} className="w-1/2 p-4 border-2 border-gray-300 rounded-lg shadow-md transform hover:scale-125 transition-transform duration-300">
         <label htmlFor="email" className="block text-sm font-medium text-gray-600">
           Email Address
         </label>

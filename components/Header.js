@@ -43,7 +43,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
             <div className="w-full h-full absolute top-0 left-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
-              <div className="absolute top-0 right-0 p-4">
+              <div className="absolute top-0 right-0 p-4 ">
                 <AiOutlineClose
                   className="text-3xl text-gray-600 dark:text-gray-400 cursor-pointer"
                   onClick={toggleMenu}
@@ -70,7 +70,7 @@ export default function Header() {
 
 
             <div className="text-center p-10 py-10">
-                <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+                <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl hover:scale-105 transition-transform duration-300">
                     Arnav Panchal
                 </h2>
                 <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
@@ -80,7 +80,7 @@ export default function Header() {
                     Freelancer providing services for programming and design content
                     needs. Join me down below and let's get cracking!
                 </p>
-                <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+                <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400 ">
                     <AiFillTwitterCircle />
                     <AiFillLinkedin />
                     <AiFillInstagram />
