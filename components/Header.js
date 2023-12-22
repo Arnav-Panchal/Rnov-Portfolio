@@ -54,7 +54,7 @@ export default function Header() {
           </div>
         )}
             <nav className="py-10 mb-12 flex justify-between dark:text-white">
-                <Image src={favicon} className="h-16 w-16 " href="cursor-pointer"/>
+                <Image src={favicon} className="h-16 w-16 " href="cursor-pointer" alt=""/>
                 <div className="flex items-center">
                 
                 <div
@@ -86,7 +86,7 @@ export default function Header() {
                     <AiFillInstagram />
                 </div>
                 <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-                    <Image src={deved} layout="fill" objectFit="cover" />
+                    <Image src={deved} layout="fill" objectFit="cover" alt=""/>
                 </div>
             </div>
         </section>
