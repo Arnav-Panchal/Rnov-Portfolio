@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Cards from "@/components/Cards";
 import Folio from "@/components/Folio";
 //import Slider from "@/components/Slider";
-import Email from "@/components/Email";
+import ContactForm from "@/components/Email";
 import Showcase from "@/components/Showcase";
 // import { Container,Heading,FormControl,FormLabel,Input } from 'postcss'
 
@@ -33,7 +33,7 @@ export default function Home() {
           <Showcase/>
         </section>
         <section>
-          <Email/>
+          <ContactForm/>
         </section>
       </main>
     </div>

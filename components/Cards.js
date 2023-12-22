@@ -10,8 +10,8 @@ export default function Cards() {
 
     <div>
         <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 teal:bg-black flex-1">
-            <div className="flex justify-center items-center">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 teal:bg-black flex-1 hover:scale-105 transition-transform duration-300">
+            <div className="flex justify-center items-center ">
               <Image src={design} width={100} height={100} />
               </div>
               <h3 className="text-lg font-medium pt-8 pb-2  ">
@@ -27,7 +27,7 @@ export default function Cards() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 flex-1 hover:scale-105 transition-transform duration-300">
             <div className="flex justify-center items-center">
               <Image src={code} width={100} height={100} />
             </div>
@@ -44,7 +44,7 @@ export default function Cards() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 teal:bg-black flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 teal:bg-black flex-1 hover:scale-105 transition-transform duration-300">
             <div className="flex justify-center items-center">
               <Image src={consulting} width={100} height={100} />
             </div>

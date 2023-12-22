@@ -1,52 +1,59 @@
 "use client"
-import { Container,Heading,FormControl,FormLabel,Input, Textarea, FormErrorMessage } from '@chakra-ui/react'
-import {useState} from "react";
+// Import Tailwind CSS classes
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
-const initvalues ={name:"",email:"",subject:"",message:"",}
-const initState={values : initvalues}
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xzbnpkdy");
 
-export default function Email() { 
-  const [state ,setState]=useState(initState);
-
-  const { values } = state;
-
-  const handlechange = (target) => 
-  setState((prev) => ({
-    ...prev,
-    values:{
-        ...prev.values,
-        [target.name]: target.value,
-    },
-  }));
+  if (state.succeeded) {
+    return <p className="text-green-500">Thanks for joining!</p>;
+  }
 
   return (
-    <Container maxW="450px" mt={12}>
-        <Heading>Contact</Heading>
-        <FormControl isRequired isInvalid={values.name}>
-            <FormLabel>Name</FormLabel>
-            <Input type="text" name="name" errorBorderColor="red.300" value={values.name} onChange={handlechange}/>
-            <FormErrorMessage>
-              Required
-            </FormErrorMessage>
-        </FormControl>
+    <div className="flex items-center justify-center h-screen">
+      <form onSubmit={handleSubmit} className="w-1/2 p-4 border-2 border-gray-300 rounded-lg shadow-md transform hover:scale-125 transition-transform duration-300">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-600">
+          Email Address
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          className="mt-1 p-2 w-full border rounded-md  text-black"
+        />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
+          className="text-red-500"
+        />
 
+        <label htmlFor="message" className="block mt-4 text-sm font-medium text-gray-600">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          className="mt-1 p-2 w-full border rounded-md text-black"
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+          className="text-red-500"
+        />
 
-        <FormControl isRequired>
-            <FormLabel>Email</FormLabel>
-            <Input type="email" name="email" value={values.email} onChange={handlechange}/>
-        </FormControl>
-
-
-        <FormControl isRequired>
-            <FormLabel>subject</FormLabel>
-            <Input type="text" name="subject" value={values.subject} onChange={handlechange}/>
-        </FormControl>
-
-
-      <FormControl isRequired >
-            <FormLabel>Message</FormLabel>
-            <Textarea type="text" name="message" rows={4} value={values.message} onChange={handlechange}/>
-        </FormControl>
-    </Container>
-  )
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className="mt-4 p-2 w-full bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-300"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  );
 }
+
+export default ContactForm;

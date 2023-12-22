@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Aboutme() {
   return (
-    <div className="bg-gradient-to-r from-cyan-800 text-to-teal-500 rounded-2xl shadow-lg">
+    <div className="bg-gradient-to-r from-cyan-800 text-to-teal-500 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
             <div className="p-8">
             <h3 className="text-6xl py-1 text-teal-500 py-5">About Me</h3>
             <p className="text-md text-2xl py-8 leading-8 text-gray-400">
