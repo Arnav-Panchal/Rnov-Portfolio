@@ -1,19 +1,64 @@
-import React from 'react'
+// MenuPage.js
+"use client"
+import React from 'react';
+import Link from 'next/link';
 
-export default function Menu() {
+const MenuPage = () => {
   return (
-    <div>
-        <div className='text-5xl py-2 text-teal-600 font-medium '>
-                <h1>
-                  About Me
-                </h1>
-                <h1><a
-                       href="public/Resume.pdf" download="Arnav.pdf">
-                        Resume
-                   </a>
-                </h1>
-              </div>
+    <div className="menu-container">
+      <div className="content">
+        <Link href="/resume">
+          <div className="menu-item">Resume</div>
+        </Link>
+        <Link href="/about">
+          <div className="menu-item">About Me</div>
+        </Link>
+        <Link href="/contacts">
+          <div className="menu-item">Contacts</div>
+        </Link>
+        <Link href="/projects">
+          <div className="menu-item">Projects</div>
+        </Link>
+        <Link href="/certifications">
+          <div className="menu-item">Certifications</div>
+        </Link>
+      </div>
 
+      <style jsx>{`
+        .menu-container {
+          display: flex;
+          flex-direction: column; /* Change to column */
+          height: 100vh;
+        }
+
+        .content {
+          flex: 1;
+          padding-top: 15%;
+          padding-right: 10%;
+          padding-left: 10%; /* Adjust top padding */
+          padding-bottom: 10%; /* Adjust bottom padding */
+          background-color: white;
+        }
+
+        .menu-item {
+          margin: 10px;
+          padding: 15px;
+          font-size: 24px;
+          cursor: pointer;
+          border: 2px solid white;
+          border-radius: 5px;
+          color: black;
+          box-sizing: border-box;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        .menu-item:hover {
+          background-color: black;
+          color: white;
+        }
+      `}</style>
     </div>
-  )
-}
+  );
+};
+
+export default MenuPage;

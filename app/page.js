@@ -16,8 +16,8 @@ import Showcase from "@/components/Showcase";
 export default function Home() {
 
   return (
-    <div>
-      <main className=" bg-black px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+    <div className="bg-fixed-image bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('../public/cube.jpg')" }}>
+      <main className=" bg-black px-10 dark:bg-gray-900 md:px-20 lg:px-40" >
         <Header />
         <section className="py-20">
           <div>

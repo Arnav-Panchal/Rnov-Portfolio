@@ -7,7 +7,11 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xzbnpkdy");
 
   if (state.succeeded) {
-    return <p className="text-green-500">Thanks for joining!</p>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-teal-500 text-4xl font-bold">Thanks for joining!</p>
+      </div>
+    );
   }
 
   return (
