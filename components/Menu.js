@@ -3,18 +3,21 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
 const MenuPage = () => {
   return (
+    <div >
     <div className="menu-container">
       <div className="content">
-        <Link href="/resume">
-          <div className="menu-item">Resume</div>
+        <Link href="Resume.pdf">
+          <div className="menu-item " > Resume <a/></div>
         </Link>
         <Link href="/about">
           <div className="menu-item">About Me</div>
         </Link>
         <Link href="/contacts">
-          <div className="menu-item">Contacts</div>
+          <div className="menu-item">Contact me</div>
         </Link>
         <Link href="/projects">
           <div className="menu-item">Projects</div>
@@ -57,6 +60,7 @@ const MenuPage = () => {
           color: white;
         }
       `}</style>
+    </div>
     </div>
   );
 };

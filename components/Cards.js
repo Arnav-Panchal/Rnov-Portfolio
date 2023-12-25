@@ -4,13 +4,14 @@ import code from "../public/code.png";
 import design from "../public/design.png";
 import consulting from "../public/consulting.png";
 import Image from "next/image";
+import Opensrc from "@/components/Opensrc";
 
 export default function Cards() {
   return (
 
     <div>
         <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 teal:bg-black flex-1 hover:scale-105 transition-transform duration-300">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 bg-teal-900 teal:bg-black flex-1 hover:scale-105 transition-transform duration-300">
             <div className="flex justify-center items-center ">
               <Image src={design} width={100} height={100} alt=""/>
               </div>
@@ -60,6 +61,10 @@ export default function Cards() {
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
           </div>
+          <section>
+          <Opensrc/>
+        </section>
     </div>
+    
   )
 }

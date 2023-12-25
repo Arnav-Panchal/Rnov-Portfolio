@@ -11,9 +11,9 @@ import {
     AiOutlineMenu,
     AiOutlineClose,
   } from "react-icons/ai";
-import deved from "../public/dev-ed-wave.png";
 import favicon from "../public/favicon.png";
 import Menu from './Menu';
+import onto from '../public/onto.png';
 
 export default function Header() {
 
@@ -67,8 +67,6 @@ export default function Header() {
               )}</div>
             </div>
             </nav>
-
-
             <div className="text-center p-10 py-10">
                 <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl hover:scale-105 transition-transform duration-300">
                     Arnav Panchal
@@ -84,9 +82,6 @@ export default function Header() {
                     <AiFillTwitterCircle />
                     <AiFillLinkedin />
                     <AiFillInstagram />
-                </div>
-                <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-                    <Image src={deved} layout="fill" objectFit="cover" alt=""/>
                 </div>
             </div>
         </section>
