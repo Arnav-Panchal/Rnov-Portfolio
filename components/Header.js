@@ -1,4 +1,5 @@
 "use client";
+import { IconContext } from 'react-icons';
 import React from 'react'
 import {useState} from "react";
 // import AOS from "aos";
@@ -39,7 +40,7 @@ export default function Header() {
       return (
   
     <div >
-        <section className={`min-h-screen relative ${isMenuOpen ? 'fixed' : ''}`}>
+        <section className={`min-h-screen relative border-b border-yourColor pb-4 ${isMenuOpen ? 'fixed' : ''}`}>
         {isMenuOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
             <div className="w-full h-full absolute top-0 left-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
@@ -79,9 +80,22 @@ export default function Header() {
                     needs. Join me down below and lets get cracking!
                 </p>
                 <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400 ">
-                    <AiFillTwitterCircle />
-                    <AiFillLinkedin />
-                    <AiFillInstagram />
+                <IconContext.Provider value={{ size: '1.5em' }}>
+      <a href="https://twitter.com/ArnavPanchal9" target="_blank" rel="noopener noreferrer">
+        <AiFillTwitterCircle />
+      </a>
+    </IconContext.Provider>
+
+    <IconContext.Provider value={{ size: '1.5em' }}>
+      <a href="https://www.instagram.com/_arnav2827/" target="_blank" rel="noopener noreferrer">
+        <AiFillInstagram />
+      </a>
+    </IconContext.Provider>
+    <IconContext.Provider value={{ size: '1.5em' }}>
+      <a href="https://www.linkedin.com/in/arnav-panchal-39403223a/" target="_blank" rel="noopener noreferrer">
+        <AiFillLinkedin />
+      </a>
+    </IconContext.Provider>
                 </div>
             </div>
         </section>

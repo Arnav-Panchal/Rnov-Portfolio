@@ -30,11 +30,11 @@ export default function Home() {
         
         <section className="py-10">
           <Folio/>
-          <Showcase/>
+          {/* <Showcase/> */}
         </section>
-        <section>
+        {/* <section>
           <ContactForm/>
-        </section>
+        </section> */}
       </main>
     </div>
   );
