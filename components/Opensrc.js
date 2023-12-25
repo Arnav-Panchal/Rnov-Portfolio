@@ -1,5 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
+import { DownloadIcon, Github } from "lucide-react";
+
 import fetch from 'isomorphic-fetch';
 
 function Opensrc() {
