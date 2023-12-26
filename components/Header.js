@@ -85,7 +85,6 @@ export default function Header() {
         <AiFillTwitterCircle />
       </a>
     </IconContext.Provider>
-
     <IconContext.Provider value={{ size: '1.5em' }}>
       <a href="https://www.instagram.com/_arnav2827/" target="_blank" rel="noopener noreferrer">
         <AiFillInstagram />
