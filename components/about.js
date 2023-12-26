@@ -124,7 +124,7 @@ const Aboutme = () => {
 
 
   return (
-    <section className='text-white'>
+    <section className='text-white border-b border-teal-200 pb-40 pt-20 '>
         <div className='md:grid md:grid-cols-3 gap-8 items-center py-8 px-4 xl:gap-16 sm:py16 xl:px-16 rounded-xl border text-card-foreground shadow hover:scale-105 transition-transform duration-300'>
             <div className='col-span-1 flex items-center'> 
             <Image src={photo} className='rounded-full px-5 py-5' alt="" height={500} width={500}/>

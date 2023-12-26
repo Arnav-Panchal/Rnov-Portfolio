@@ -1,6 +1,7 @@
 // MenuPage.js
 "use client"
 import React from 'react';
+import ContactForm from "@/components/Email";
 import Link from 'next/link';
 
 
@@ -16,7 +17,7 @@ const MenuPage = () => {
         <Link href="/about">
           <div className="menu-item">About Me</div>
         </Link>
-        <Link href="/contacts">
+        <Link href="/Email">
           <div className="menu-item">Contact me</div>
         </Link>
         <Link href="/projects">
