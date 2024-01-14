@@ -10,6 +10,8 @@ import Folio from "@/components/Folio";
 import ContactForm from "@/components/Email";
 import Showcase from "@/components/Showcase";
 import cudeImage from "../public/cube.jpg";
+import ProfileStats from "@/components/profilestats";
+import Footer from "@/components/footer";
 // import { Container,Heading,FormControl,FormLabel,Input } from 'postcss'
 
 
@@ -29,12 +31,17 @@ export default function Home() {
         </section>
         
         <section className="py-10">
-          <Folio/>
+          
+          {/* <ProfileStats/> */}
           {/* <Showcase/> */}
         </section>
-        {/* <section>
+        <section>
           <ContactForm/>
-        </section> */}
+        </section>
+        {/* <Folio/> */}
+
+        <Footer/>
+        
       </main>
     </div>
   );

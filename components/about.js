@@ -1,11 +1,9 @@
 "use client"
 import React,{useTransition ,useState} from 'react'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact ,FaNode, FaSpring, FaServer } from 'react-icons/fa';
-import { IoLogoReact } from 'react-icons/io5';
-import { DiReact } from 'react-icons/di';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaServer } from 'react-icons/fa';
 import Image from 'next/image'
 import photo from "../public/photo.jpg"
-import NextJsIcon from '../components/NextJsIcon';
+// import NextJsIcon from '../components/NextJsIcon';
 import TabButton from './TabButton';
 import { FaDatabase } from "react-icons/fa";
 
@@ -33,15 +31,10 @@ const TAB_DATA = [
         React.js
     </li>
     <li className="mb-4 flex items-center">
-        <NextJsIcon className="mr-2" />
+    <FaReact className="mr-2" />
         Next.js
     </li>
 </ul>
-<div className="text-gray-500 text-sm">
-    <p className="mb-4 blur-text">Seasoned in React and Next.js, skilled in Next.js 13 advancements
-     like App Router, Server Components, and SEO optimizations for top-tier frontend development.
-    </p>
-</div>
         </ul>
         )
     },
@@ -49,12 +42,14 @@ const TAB_DATA = [
         title:"Backend",
         id:"Backend",
         content:(
-        <ul className="text-gray-400 py-5 text-2xl">
-            <li className="mb-4 flex items-center">
-                <FaNode className="mr-2" />Node.js</li>
-            <li className="mb-4 flex items-center"><FaSpring className="mr-2" />Spring</li>
-            <li className="mb-4 flex items-center"><FaServer className="mr-2" />RESTful APIs</li>
-        </ul>
+            <ul className="text-gray-400 py-5 text-2xl">
+            <li className="mb-4">•  Node.js
+            </li>
+            <li className="mb-4">•  Spring
+            </li>
+            <li className="mb-4">•  RESTful APIs
+            </li>
+          </ul>
         )
     },
     {
@@ -63,12 +58,8 @@ const TAB_DATA = [
         content:(
         <ul>
             <ul className="text-gray-400 py-5 text-2xl">
-                <li className="mb-4">• Frontend: HTML, CSS, JavaScript, React.js, Next.js</li>
-                <li className="mb-4">• Backend: Node.js, Spring , RESTful APIs</li>
-                <li className="mb-4">• Content Management Systems: WordPress</li>
-                <li className="mb-4">• Design Tools: Figma, Canva</li>
-                <li className="mb-4">• Data Structures and Algorithms</li>
-                <li className="mb-4">• Version Control: Git</li>
+                <li className="mb-4">• Figma</li>
+                <li className="mb-4">• Canva</li>
               </ul>
         </ul>
         )
@@ -79,14 +70,10 @@ const TAB_DATA = [
         content:(
         <ul>
             <ul className="text-gray-400 py-5 text-2xl">
-                <li className="mb-4">• Frontend: HTML, CSS, JavaScript, React.js, Next.js</li>
-                <li className="mb-4">• Backend: Node.js, Spring , RESTful APIs</li>
-                <li className="mb-4">• Content Management Systems: WordPress</li>
-                <li className="mb-4">• Design Tools: Figma, Canva</li>
-                <li className="mb-4">• Data Structures and Algorithms</li>
-                <li className="mb-4">• Programming Languages: C/C++, Python, Java ,JavaScript</li>
-                <li className="mb-4">• Databases: MySQL</li>
-                <li className="mb-4">• Version Control: Git</li>
+                <li className="mb-4">• Java</li>
+                <li className="mb-4">• JavaScript</li>
+                <li className="mb-4">• Python</li>
+                <li className="mb-4">• C/C++</li>
               </ul>
         </ul>
         )
@@ -110,14 +97,9 @@ const TAB_DATA = [
         content:(
         <ul>
             <ul className="text-gray-400 py-5 text-2xl">
-                <li className="mb-4">• Frontend: HTML, CSS, JavaScript, React.js, Next.js</li>
-                <li className="mb-4">• Backend: Node.js, Spring , RESTful APIs</li>
-                <li className="mb-4">• Content Management Systems: WordPress</li>
-                <li className="mb-4">• Design Tools: Figma, Canva</li>
-                <li className="mb-4">• Data Structures and Algorithms</li>
-                <li className="mb-4">• Programming Languages: C/C++, Python, Java ,JavaScript</li>
-                <li className="mb-4">• Databases: MySQL</li>
-                <li className="mb-4">• Version Control: Git</li>
+                <li className="mb-4">• Git</li>
+                <li className="mb-4">• GitHub</li>
+                <li className="mb-4">• Latex</li>
               </ul>
         </ul>
         )

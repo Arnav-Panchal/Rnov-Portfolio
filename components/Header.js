@@ -2,8 +2,10 @@
 import { IconContext } from 'react-icons';
 import React from 'react'
 import {useState} from "react";
+import Typed from 'react-typed'
 // import AOS from "aos";
 // import "aos/dist/aos.css";
+
 import Image from "next/image";
 import {
     AiFillTwitterCircle,
@@ -37,6 +39,10 @@ export default function Header() {
         document.body.classList.toggle('overflow-hidden',isMenuOpen);
       };
 
+      const customFontStyle = {
+        fontFamily: 'Britannic Bold',
+    };
+
       return (
   
     <div >
@@ -68,13 +74,20 @@ export default function Header() {
               )}</div>
             </div>
             </nav>
-            <div className="text-center p-10 py-10">
+            <div className="text-center p-10 py-10" style={customFontStyle}>
                 <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl hover:scale-105 transition-transform duration-300">
                     Arnav Panchal
                 </h2>
-                <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-                    I am a Developer
-                </h3>
+                <div className="text-2xl py-10 dark:text-white md:text-3xl">
+                <Typed className='pl-3'
+                    strings={['  Full Stack Web Developer !',
+                    '  Java Spring Developer !',
+                    '  Sports Enthusiast']}
+                    typeSpeed={100}
+                    loop={true}
+                    backSpeed={120}
+                />
+            </div>
                 <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
                     Freelancer providing services for programming and design content
                     needs. Join me down below and lets get cracking!
