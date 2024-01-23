@@ -11,10 +11,12 @@ import {
     AiFillTwitterCircle,
     AiFillLinkedin,
     AiFillInstagram,
+    AiFillGithub,
     AiOutlineMenu,
     AiOutlineClose,
   } from "react-icons/ai";
 import favicon from "../public/favicon.png";
+import AP from "../public/A.png"
 import Menu from './Menu';
 import onto from '../public/onto.png';
 
@@ -61,7 +63,7 @@ export default function Header() {
           </div>
         )}
             <nav className="py-10 mb-12 flex justify-between dark:text-white">
-                <Image src={favicon} className="h-16 w-16 " href="cursor-pointer" alt=""/>
+                <Image src={AP} className="h-20 w-20 " href="cursor-pointer" alt=""/>
                 <div className="flex items-center">
                 
                 <div
@@ -96,6 +98,11 @@ export default function Header() {
                 <IconContext.Provider value={{ size: '1.5em' }}>
       <a href="https://twitter.com/ArnavPanchal9" target="_blank" rel="noopener noreferrer">
         <AiFillTwitterCircle />
+      </a>
+    </IconContext.Provider>
+    <IconContext.Provider value={{ size: '1.5em' }}>
+      <a href="https://github.com/Arnav-Panchal" target="_blank" rel="noopener noreferrer">
+        <AiFillGithub />
       </a>
     </IconContext.Provider>
     <IconContext.Provider value={{ size: '1.5em' }}>
