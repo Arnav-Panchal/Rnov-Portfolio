@@ -7,6 +7,7 @@ import photo from "../public/photo.jpg"
 import TabButton from './TabButton';
 import { FaDatabase } from "react-icons/fa";
 
+
 const TAB_DATA = [
     {
         title:"Frontend",
@@ -172,7 +173,9 @@ const Aboutme = () => {
                 <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
             </div>
         </div>
+
     </section>
+    
   )
 }
 

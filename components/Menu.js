@@ -1,12 +1,17 @@
 // MenuPage.js
 "use client"
 import React from 'react';
+import { useState } from 'react';
 import ContactForm from "@/components/Email";
 import Link from 'next/link';
+import ProjectsPage from './Projects';
+import Aboutme from '@/components/about';
 
 
 
 const MenuPage = () => {
+
+
   return (
     <div >
     <div className="menu-container">
@@ -17,7 +22,7 @@ const MenuPage = () => {
         <Link href="/about">
           <div className="menu-item">About Me</div>
         </Link>
-        <Link href="/Email">
+        <Link href="/email">
           <div className="menu-item">Contact me</div>
         </Link>
         <Link href="/projects">

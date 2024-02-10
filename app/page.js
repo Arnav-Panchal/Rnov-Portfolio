@@ -3,7 +3,7 @@
 
 import Aboutme from "@/components/about";
 import Header from "@/components/Header";
-//import Cards from "@/components/Cards";
+// import Cards from "@/components/Cards";
 import Folio from "@/components/Folio";
 //import Slider from "@/components/Slider";
 // import HS from
@@ -33,7 +33,7 @@ export default function Home() {
         <section className="py-10">
           
           {/* <ProfileStats/> */}
-          {/* <Showcase/> */}
+          <Showcase/>
         </section>
         <section>
           <ContactForm/>
