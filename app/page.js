@@ -12,6 +12,7 @@ import Showcase from "@/components/Showcase";
 import cudeImage from "../public/cube.jpg";
 import ProfileStats from "@/components/profilestats";
 import Footer from "@/components/footer";
+
 // import { Container,Heading,FormControl,FormLabel,Input } from 'postcss'
 
 
@@ -27,6 +28,7 @@ export default function Home() {
           <div>
             <Aboutme />
           </div>
+          
           {/* <Cards/> */}
         </section>
         
